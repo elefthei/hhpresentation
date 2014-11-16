@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.aux 
 *.d 
 *.log 
@@ -8,3 +9,7 @@
 *.dvi 
 *.ps
 *.toc
+=======
+*.swp
+.DS_Store
+>>>>>>> e91a5423d7c794b61c5ad7da9d12db2507fbbd22
