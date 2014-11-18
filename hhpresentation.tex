@@ -6,8 +6,8 @@
 \usecolortheme{beaver}
 \title[A constant current applied to the HH model produces a train of action potentials.]{Step current responce of the HH Model}
 
-\author[E.Ioannidis \& J.Hobin] {
-   \texorpdfstring{
+\author[E.Ioannidis \& J.Hobin] {\
+   \texorpdfstring{\
         \begin{columns}
             \column{.45\linewidth}
             \centering
@@ -34,7 +34,7 @@
 
 % Title slide (1)
 \begin{frame}
-  \titlepage
+  \titlepage{}
 \end{frame}
 
 % slide 2
@@ -44,6 +44,35 @@
     \includegraphics[width = 0.8\textwidth]{./pictures/gerstner.png}
     \caption{Phase diagram for stimulation with a step current.}
   \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./images/current_0_3.jpg}
+    \caption{Simulated single action potential.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./images/current_0_2p4.jpg}
+    \caption{Simulated ringing response.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./images/current_0_10.jpg}
+    \caption{Simulated train of repeating potentials.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  Finding train frequency \\
+  We perform a simple FFT of the $V_m$ for different current steps, check out these pictures
 \end{frame}
 
 % slide 0
@@ -123,19 +152,6 @@
     \includegraphics[width = 0.8\textwidth]{./images/current35.jpg}
     \caption{HH Models step current response starting at 0 $\mu A/cm^2$}
   \end{figure}
-\end{frame}
-
-\begin{frame}
-  Finding train frequency
-\end{frame}
-
-\begin{frame}
-  The three phases
-\end{frame}
-
-\begin{frame}
-  Experimental design
-  Precision required
 \end{frame}
 
 % slide 40
@@ -224,6 +240,22 @@
     \centering
     \includegraphics[width = 0.8\textwidth]{./images/current80.jpg}
     \caption{HH Models step current response starting at 0 $\mu A/cm^2$}
+  \end{figure}
+\end{frame}
+
+% Experimental design
+\begin{frame}
+  % Precision required
+  % Simulation very sensitive to minute perturbations
+  % Base precision settings appear to be calibrated for fast approximations of
+  % single action potentials at lower currents
+  % Needed much higher precision to get reasonable values
+  % Diagnosis used stepping by 0.1 increments at very high current
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
+    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
+    \caption{Unpredictable behavior at high current}
   \end{figure}
 \end{frame}
 
