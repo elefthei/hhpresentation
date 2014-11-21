@@ -37,6 +37,23 @@
   \titlepage{}
 \end{frame}
 
+\begin{frame}{The HH Model}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./pictures/hh.png}
+    \caption{Circuit Definition of the HH Model.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Simulation Software}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./pictures/api2.png}
+  \end{figure}
+\end{frame}
+
+
+
 % slide 2
 \begin{frame}{Three possible responces to a step current}
   \begin{figure}
@@ -69,25 +86,6 @@
     \caption{Simulated train of repeating potentials.}
   \end{figure}
 \end{frame}
-
-\begin{frame}{Finding train frequency; LSSA}
-  To find the train frequency we used the Least-Squares spectral analysis method (LSSA). 
-  LSSA is a method of estimating a frequency spectrum, 
-based on a least squares fit of sinusoids to data samples, similar to Fourier analysis. \\[0.8cm]
-It works \emph{better} than Fourer Analysis on data with variable time intervals such as the ones we are studying.
-
-\end{frame}
-
-\begin{frame}{Train frequency over increasing input step}
-
-\begin{figure}
-    \centering
-    \includegraphics[width = 0.8\textwidth]{./images/freqvscurrent.jpg}
-    \caption{HH Models step current response starting at 0 $\mu A/cm^2$}
-  \end{figure}
-
-\end{frame}
-
 % slide 0
 \begin{frame}
   \begin{figure}
@@ -256,8 +254,27 @@ It works \emph{better} than Fourer Analysis on data with variable time intervals
   \end{figure}
 \end{frame}
 
+\begin{frame}{Finding train frequency; LSSA}
+  To find the train frequency we used the Least-Squares spectral analysis method (LSSA). 
+  LSSA is a method of estimating a frequency spectrum, 
+based on a least squares fit of sinusoids to data samples, similar to Fourier analysis. \\[0.8cm]
+It works \emph{better} than Fourer Analysis on data with variable time intervals such as the ones we are studying.
+
+\end{frame}
+
+\begin{frame}{Train frequency over increasing input step}
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{./images/freqvscurrent.jpg}
+    \caption{Graph of train frequency over increasing input step}
+  \end{figure}
+
+\end{frame}
+
+
 % Experimental design
-\begin{frame}
+\begin{frame}{Issues with precision approximation}
   % Precision required
   % Simulation very sensitive to minute perturbations
   % Base precision settings appear to be calibrated for fast approximations of
