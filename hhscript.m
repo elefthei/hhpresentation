@@ -26,15 +26,17 @@ foldername = pwd;
 % set duration to 100 ms
 hhscr('set', 'stimulus', 'duration', 100);
 hhscr('set', 'numerics', 'initialstep', 0.025);
-hhscr('set', 'numerics', 'maxstep', 0.1);
+hhscr('set', 'numerics', 'maxstep', 0.025);
 hhscr('set', 'numerics', 'reltol', 1e-7);
 
 %  Set up a loop that samples through a temperature range.
 pfig = figure;
 paxes = axes;
 hold(paxes, 'on');
+FREQS = [];
+
 for holdCurrent = 0:1:0
-    for currentStep = 10:0.01:100
+    for currentStep = 10:1:20
         hhscr('set', 'stimulus', 'holding', holdCurrent);
 
         hhscr('set', 'stimulus', 'pulse1', 'start', 10);
@@ -52,13 +54,28 @@ for holdCurrent = 0:1:0
         [userdata, fig] = hhcntrl('data');
         %SAVEDATA
         s = struct('HHP',[],'t',[],'y',[],'HHS',[],'spar',[],'num',[],'dur',[]);
-        s.HHP = getappdata(fig,'HHP'); s.HHS = getappdata(fig,'HHS');
-        s.t = getappdata(fig,'t'); s.y = getappdata(fig,'y');
-        s.spar = getappdata(fig,'spar'); s.num = getappdata(fig,'num');
+        s.HHP = getappdata(fig,'HHP'); 
+        s.HHS = getappdata(fig,'HHS');
+        s.t = getappdata(fig,'t'); 
+        s.y = getappdata(fig,'y');
+        s.spar = getappdata(fig,'spar'); 
+        s.num = getappdata(fig,'num');
         s.dur = getappdata(fig,'dur');
-
+        
+        % added CODE HERE
+Fs = 1;                    % Sampling frequency
+T = 1/Fs;                     % Sample time
+L = length(s.y(:,1));                     % Length of signal
+t = (0:L-1)*T;                % Time vector
+% Sum of a 50 Hz sinusoid and a 120 Hz sinusoid
+[maxValue,indexMax] = max(abs(fft(s.y(:,1)-mean(s.y(:,1)))));
+freq = indexMax * Fs / L;
+FREQS = [FREQS, freq];
+        % END ADDED CODE HERE
+        
         pfig = figure;
         paxes = axes;
+        
         plot(paxes, s.t, s.y(:,1), 'LineWidth', 1, 'Color', [0 0 0.4]);
         ylim(paxes, [-70,30]);
         title(paxes, desc);
@@ -66,6 +83,12 @@ for holdCurrent = 0:1:0
         close(pfig);
     end
 end
+
+ffig = figure;
+faxes = axes;
+hold(faxes, 'on');
+title(faxes, 'Frequency changes');
+plot(faxes, range(length(FREQS)), FREQS, 'LineWidth', 1, 'Color', [0 0 0.4]);
 
 %That's it -- all the data has been saved.
 
