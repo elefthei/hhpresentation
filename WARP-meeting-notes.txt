@@ -6,4 +6,5 @@
 - Change Plot Font
 - Make Values legible on all fonts
 - Headings on all slides
-- Header, Image, Take-away point
+- For each slide: Header, Image, Take-away point
+- Add Implications slide
