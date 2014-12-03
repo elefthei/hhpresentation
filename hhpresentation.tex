@@ -234,16 +234,23 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Finding train frequency; LSSA}
-  To find the train frequency we used the Least-Squares spectral analysis method (LSSA). 
-  LSSA is a method of estimating a frequency spectrum, 
-based on a least squares fit of sinusoids to data samples, similar to Fourier analysis. \\[0.8cm]
-It works \emph{better} than Fourer Analysis on data with variable time intervals such as the ones we are studying.
+\begin{frame}{DFT insufficient}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.8\textwidth]{ INSERT PIC HERE }
+    \caption{Discrete Fourier Transform insufficient due to variable time intervals.}
+  \end{figure}
+\end{frame}
 
+\begin{frame}{Least-squares spectral analysis}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.6\textwidth]{lomb_vs_FFT.png}
+    \caption{The Lomb–Scargle Periodogram works better with variable intervals.}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Train frequency over increasing input step}
-
 \begin{figure}
     \centering
     \includegraphics[width = 0.8\textwidth]{./images/freqvscurrent.jpg}
