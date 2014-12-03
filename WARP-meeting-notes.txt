@@ -1,0 +1,9 @@
+- Capitalize title
+- Colorize Phase Diagram
+- Change Caption of Phase Diagram
+- Remove Goalkeeper picture
+- Add List instead of Goalkeeper
+- Change Plot Font
+- Make Values legible on all fonts
+- Headings on all slides
+- Header, Image, Take-away point
