@@ -235,25 +235,24 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Naive Mechanism}
+% Experimental design
+\begin{frame}{Anomalies With Default HH Model Settings}
+  % Precision required
+  % Simulation very sensitive to minute perturbations
+  % Base precision settings appear to be calibrated for fast approximations of
+  % single action potentials at lower currents
+  % Needed much higher precision to get reasonable values
+  % Diagnosis used stepping by 0.1 increments at very high current
   \begin{figure}
     \centering
-    \includegraphics[width = 0.7\textwidth]{./images/{cap_1.5vs1.5}.jpg}
+    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
+    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
 
-    Equal ratio of current to capacitance
+    Incorrect behavior due to low precision
   \end{figure}
 \end{frame}
 
-\begin{frame}{Mechanism}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.7\textwidth]{./images/{cap_1.5vs2.4}.jpg}
-
-    Unequal ratio of current to capacitance
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Fourier Transform insufficient: Inconsistent Time Intervals}
+\begin{frame}{Fourier Transform Insufficient: Inconsistent Time Intervals}
   \begin{figure}
     \centering
     \includegraphics[width = 0.7\textwidth]{./images/lintimevsactualtime.jpg}
@@ -262,7 +261,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Least-squares spectral analysis}
+\begin{frame}{Least-Squares Spectral Analysis}
   \begin{figure}
     \centering
     \includegraphics[width = 0.6\textwidth]{./pictures/lomb_vs_FFT.png}
@@ -281,39 +280,40 @@
 \end{frame}
 
 
-\begin{frame}{Train period over increasing input step}
-\begin{figure}
+\begin{frame}{Graphing the Train Period}
+  \begin{figure}
     \centering
     \includegraphics[width = 0.7\textwidth]{./images/periodvscurrent.jpg}
 
     Nonlinearity shows complexity of behavior
   \end{figure}
-
 \end{frame}
 
-% Experimental design
-\begin{frame}{Anomalies with precision approximation}
-  % Precision required
-  % Simulation very sensitive to minute perturbations
-  % Base precision settings appear to be calibrated for fast approximations of
-  % single action potentials at lower currents
-  % Needed much higher precision to get reasonable values
-  % Diagnosis used stepping by 0.1 increments at very high current
+\begin{frame}{Naive Mechanism}
   \begin{figure}
     \centering
-    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
-    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
+    \includegraphics[width = 0.7\textwidth]{./images/{cap_1.5vs1.5}.jpg}
 
-    Incorrect behavior due to low precision
+    Equal ratio of current to capacitance
   \end{figure}
 \end{frame}
 
+\begin{frame}{Mechanism}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.7\textwidth]{./images/{cap_1.5vs2.4}.jpg}
+
+    Unequal ratio of current to capacitance
+  \end{figure}
+\end{frame}
+
+
 \begin{frame}{Conclusion}
   \begin{enumerate}
+    \item Innovative experimental method
     \item Clear definition of saturation threshold
     \item High accuracy prediction of cell response
     \item Refuted possible simplification
-    \item Innovative experimental method
   \end{enumerate}
 \end{frame}
 
