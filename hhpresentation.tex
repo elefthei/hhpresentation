@@ -235,6 +235,50 @@
   \end{figure}
 \end{frame}
 
+% Experimental design
+\begin{frame}{Anomalies With Default HH Model Settings}
+  % Precision required
+  % Simulation very sensitive to minute perturbations
+  % Base precision settings appear to be calibrated for fast approximations of
+  % single action potentials at lower currents
+  % Needed much higher precision to get reasonable values
+  % Diagnosis used stepping by 0.1 increments at very high current
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
+    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
+
+    Incorrect behavior due to low precision
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Fourier Transform Insufficient: Inconsistent Time Intervals}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.7\textwidth]{./images/lintimevsactualtime.jpg}
+
+    FFT insufficient, need a better Spectral Analysis Method
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Least-Squares Spectral Analysis}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.6\textwidth]{./pictures/lomb_vs_FFT.png}
+
+    The Lomb-Scargle Periodogram works with variable intervals.
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Graphing the Train Period}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.7\textwidth]{./images/periodvscurrent.jpg}
+
+    Nonlinearity shows complexity of behavior
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Naive Mechanism}
   \begin{figure}
     \centering
@@ -253,50 +297,6 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Fourier Transform insufficient: Inconsistent Time Intervals}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.7\textwidth]{./images/lintimevsactualtime.jpg}
-
-    FFT insufficient, need a better Spectral Analysis Method
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Least-squares spectral analysis}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.6\textwidth]{./pictures/lomb_vs_FFT.png}
-
-    The Lomb-Scargle Periodogram works with variable intervals.
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Train period over increasing input step}
-\begin{figure}
-    \centering
-    \includegraphics[width = 0.7\textwidth]{./images/periodvscurrent.jpg}
-
-    Nonlinearity shows complexity of behavior
-  \end{figure}
-
-\end{frame}
-
-% Experimental design
-\begin{frame}{Anomalies with precision approximation}
-  % Precision required
-  % Simulation very sensitive to minute perturbations
-  % Base precision settings appear to be calibrated for fast approximations of
-  % single action potentials at lower currents
-  % Needed much higher precision to get reasonable values
-  % Diagnosis used stepping by 0.1 increments at very high current
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
-    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
-
-    Incorrect behavior due to low precision
-  \end{figure}
-\end{frame}
 
 \begin{frame}{Conclusion}
   \begin{enumerate}
