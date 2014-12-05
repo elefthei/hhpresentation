@@ -42,6 +42,15 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}{Hypothesis}
+  \begin{figure}
+    \centering
+    \[t = \frac{C_m}{I_m V_a}\] % time = capacitance over current times action potential
+    \[f \propto J\] % frequency proportional to current density
+    The train frequency is proportional to the current density
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Applications: Refractory Period}
   \begin{figure}
     \centering
@@ -235,23 +244,6 @@
   \end{figure}
 \end{frame}
 
-% Experimental design
-\begin{frame}{Anomalies With Default HH Model Settings}
-  % Precision required
-  % Simulation very sensitive to minute perturbations
-  % Base precision settings appear to be calibrated for fast approximations of
-  % single action potentials at lower currents
-  % Needed much higher precision to get reasonable values
-  % Diagnosis used stepping by 0.1 increments at very high current
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
-    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
-
-    Incorrect behavior due to low precision
-  \end{figure}
-\end{frame}
-
 \begin{frame}{Fourier Transform Insufficient: Inconsistent Time Intervals}
   \begin{figure}
     \centering
@@ -270,20 +262,10 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{The Frequency over Step Current Diagram}
+\begin{frame}{Graphing the Train Frequency}
   \begin{figure}
     \centering
     \includegraphics[width = 0.7\textwidth]{./images/freqvscurrent.jpg}
-
-    We can Identify the regions predicted in our initial phase diagram.
-  \end{figure}
-\end{frame}
-
-
-\begin{frame}{Graphing the Train Period}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.7\textwidth]{./images/periodvscurrent.jpg}
 
     Nonlinearity shows complexity of behavior
   \end{figure}
@@ -326,4 +308,15 @@
 \item Press, William H., and George B. Rybicki. ``Fast algorithm for spectral analysis of unevenly sampled data.'' The Astrophysical Journal 338 (1989): 277--280.
 \end{enumerate}
 \end{frame}
+
+\begin{frame}{Anomalies With Default HH Model Settings}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.4\textwidth]{./images/current55p5.jpg}
+    \includegraphics[width = 0.4\textwidth]{./images/current55p6.jpg}
+
+    Incorrect behavior due to low precision
+  \end{figure}
+\end{frame}
+
 \end{document}
